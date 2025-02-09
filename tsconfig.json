@@ -1,0 +1,76 @@
+{
+    "compilerOptions": {
+        // 编译出 JS的目标 ES 版本
+        "target": "ESNext",
+        // 使用的 es 的版本
+        "module": "ESNext",
+        "allowJs": false,
+        // 用于选择模块解析策略 有 node 和 classic 两种类型
+        "moduleResolution": "node",
+        // 严格模式
+        "strict": true,
+        // 强制代码中使用的模块文件名称必须和文件系统中的文件名保持大小写一致
+        "forceConsistentCasingInFileNames": true,
+        // 允许使用 xxx 代替 * as xxx 导入
+        "allowSyntheticDefaultImports": true,
+        // 指定 jsx 代码的生成 preserve, react-native, react 等
+        "jsx": "preserve",
+        // 用来指定编译时是否生成.map文件
+        "sourceMap": true,
+        // 通过为导入内容创建的命名空间，实现 CommonJS 和 ES 模块之间的互操作性
+        "esModuleInterop": true,
+        // 是否可以导入 json module
+        "resolveJsonModule": true,
+        // 是否检测定义了但是没有使用的变量
+        "noUnusedLocals": true,
+        // 是否检测有在函数体中没有使用的参数
+        "noUnusedParameters": true,
+        // 是否使用实验性的装饰器的特性
+        "experimentalDecorators": true,
+        // ts 中可以使用的库
+        "lib": ["DOM", "ESNext"],
+        // 不允许变量有任何隐式的any 类型
+        "noImplicitAny": false,
+        // 启用阻止对下载库的类型检查
+        "skipLibCheck": true,
+        // types用来指定需要包含的模块
+        "types": [
+            "vite/client",
+            "element-plus/global"
+        ],
+        // 编译的时候删除注释
+        "removeComments": true,
+        // 使用绝对路径时使用baseUrl去解析导入路径
+        "baseUrl": ".",
+        // 为导入路径配置别名
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "#/*": [
+                "types/*"
+            ]
+        },
+        // 配置虚拟目录
+        "rootDirs": []
+    },
+    // 指定需要编译文件
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "types/**/*.d.ts",
+        "types/**/*.ts",
+        "build/**/*.ts",
+        "build/**/*.d.ts",
+        "mock/**/*.ts",
+        "vite.config.ts"
+    ],
+    // 指定不需要编译的文件
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.js"
+    ]
+}
